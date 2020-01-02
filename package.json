@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build --target wc --name laravel-todobar",
+    "help": "vue-cli-service help",
+    "inspect": "vue-cli-service inspect",
+    "watch": "vue-cli-service build --watch"
   },
   "dependencies": {
     "core-js": "^3.4.4",

@@ -1,0 +1,33 @@
+{
+    "name": "tpaksu/laravel-todobar-vue",
+    "description": "A simple todo list drawer for development tasks listing (Vue.js version)",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Taha Paksu",
+            "email": "tpaksu@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TPaksu\\TodoBar\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TPaksu\\TodoBar\\Tests\\": "tests/"
+        }
+    },
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TPaksu\\TodoBar\\TodoBarServiceProvider"
+            ],
+            "aliases": {
+                "TodoBar": "TPaksu\\TodoBar\\Facade"
+            }
+        }
+    }
+}

@@ -1,28 +1,33 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="laravel-todobar">
+    <TodoBarHandle>
+    </TodoBarHandle>
+    <TodoBarPanel>
+      <TodoBarProjects/>
+      <div class="laravel-todobar-content">
+        <h3>Tasks</h3>
+        <TodoBarForm/>
+        <TodoBarTasks/>
+      </div>
+    </TodoBarPanel>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TodoBarHandle from './components/handle.vue'
+import TodoBarProjects from './components/projects.vue'
+import TodoBarTasks from './components/tasks.vue'
+import TodoBarForm from './components/form.vue'
+import TodoBarPanel from './components/panel.vue'
 
 export default {
-  name: 'app',
+  name: 'laravel-todobar',
   components: {
-    HelloWorld
+    TodoBarHandle, TodoBarProjects, TodoBarTasks, TodoBarForm, TodoBarPanel
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import "assets/todobar.scss";
 </style>

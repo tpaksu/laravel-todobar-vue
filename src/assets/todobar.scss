@@ -1,0 +1,210 @@
+.laravel-todobar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  height: 100vh;
+  z-index: 100;
+
+  .laravel-todobar-container {
+    display: none;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .laravel-todobar-handle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 57px;
+    background: #ff2d20;
+    font-weight: bold;
+    left: -37px;
+    padding: 9px;
+    border-radius: 5px 0 0 5px;
+    box-shadow: -2px 0 2px -1px rgba(0, 0, 0, 0.4);
+    z-index: -1;
+  }
+
+  .todobar-projects-container {
+    width: calc(100% - 30px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: #fcfcfd;
+
+    .todobar-projects-select {
+      padding: 5px;
+      margin-left: 4px;
+      flex: 1;
+      height: 24px;
+      font-size: 10px;
+      border: 1px solid #ddd;
+      border-radius: 0.25rem;
+      margin: 0;
+    }
+
+    button {
+      margin-left: 2px;
+      height: 24px;
+      border: 1px solid #ddd;
+      border-radius: 0.25rem;
+      color: white;
+      font-size: 10px;
+      font-weight: 600;
+      width: 40px;
+      &.btn-primary {
+        background: blue;
+        border-color: lighten(blue, 5%)
+      }
+      &.btn-secondary {
+        background: gray;
+        border-color: lighten(gray, 5%)
+      }
+      &.btn-danger {
+        background: red;
+        border-color: lighten(red, 5%)
+      }
+
+    }
+  }
+
+  .laravel-todobar-content {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 56.8px);
+
+
+    .laravel-todobar-form {
+      flex: 0;
+      padding: 15px;
+      background: #fcfcfd;
+      border-bottom: 1px solid #ddd;
+    }
+
+    h3 {
+      background: #eee;
+      padding: 15px;
+      border-top: 1px solid #dde;
+      border-bottom: 1px solid #dde;
+      margin: 0;
+      flex: 0;
+    }
+
+    ul.laravel-todobar-list {
+      list-style-type: none;
+      padding: 0;
+      line-height: 1.5;
+      overflow-y: scroll;
+      flex: 1;
+      margin-bottom: 0;
+
+      li {
+        padding: 15px;
+        border-bottom: 1px solid #dde;
+
+        .form-group,
+        .form-group label {
+          margin-bottom: 0;
+        }
+
+        input:checked+label .checkbox-dummy {
+          background: green;
+        }
+
+        label {
+          display: block;
+          padding-left: 30px;
+          margin-top: -20px;
+        }
+
+        .form-group input[type="checkbox"] {
+          display: none;
+        }
+
+        .form-group .checkbox-dummy {
+          background: white;
+          color: white;
+          border: 1px solid #aaa;
+          width: 20px;
+          height: 20px;
+          transform: translateY(100%) translateX(-30px);
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        input:checked+label .label-content {
+          color: slategray;
+          text-decoration: line-through;
+          text-decoration-color: slategray;
+        }
+
+        &.custom-checkbox-odd {
+          background: #f9f9f9;
+        }
+      }
+    }
+
+    .laravel-todobar-loader {
+      background: rgba(255, 255, 255, 0.7) no-repeat 50% 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+    }
+  }
+}
+
+html.todobar-active {
+  .laravel-todobar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 20vw;
+    padding: 0px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: -2px 0 2px -1px rgba(0, 0, 0, 0.1);
+
+    .laravel-todobar-container {
+      display: flex;
+    }
+
+    @media screen and (max-width: 1440px) {
+      width: 30vw;
+    }
+
+    @media screen and (max-width: 1200px) {
+      width: 40vw;
+    }
+
+    @media screen and (max-width: 992px) {
+      width: 40vw;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 60vw;
+    }
+
+    @media screen and (max-width: 576px) {
+      width: 87vw;
+    }
+
+    body.laravel-todobar-split {
+      width: 80%;
+    }
+  }
+}
