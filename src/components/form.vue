@@ -1,30 +1,42 @@
 <template>
   <div class="laravel-todobar-form">
-    <div class="input-group">
-      <textarea
-        class="form-control"
-        placeholder="Task Description"
-        aria-label="Task Description"
-        aria-describedby="button-task-description"
-        id="laravel-task-input"
-      ></textarea>
-      <div class="input-group-append" style="flex: 0">
-        <button
-          class="btn btn-primary"
-          type="button"
-          id="button-task-description"
-          onclick="todobar.tasks.add()"
-          style="white-space: pre-wrap; word-wrap: normal"
-        >
-          Push the task!
-        </button>
-      </div>
-    </div>
+    <textarea placeholder="Task Description" name="description"></textarea>
+    <button @click="saveTask">
+      Push the task!
+    </button>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    saveTask(){
+
+    }
+  }
+};
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.laravel-todobar-form {
+  flex: 0;
+  padding: 15px;
+  background: #fcfcfd;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  textarea {
+    flex: 1;
+    border-radius: .25rem 0 0 .25rem;
+    padding: 10px;
+    height: 40px;
+    border: 1px solid #ddd;
+  }
+  button {
+    flex: 0 0 70px;
+    border-radius: 0 .25rem .25rem 0;
+    background: #007BFF;
+    border: 1px solid #007BFF;
+    color: white;
+  }
+}
+</style>

@@ -33,4 +33,20 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.laravel-todobar-handle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 57px;
+  background: #ff2d20;
+  font-weight: bold;
+  left: -37px;
+  padding: 9px;
+  border-radius: 5px 0 0 5px;
+  box-shadow: -2px 0 2px -1px rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+</style>

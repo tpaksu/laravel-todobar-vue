@@ -6,8 +6,9 @@
       <TodoBarProjects/>
       <div class="laravel-todobar-content">
         <h3>Tasks</h3>
-        <TodoBarForm/>
-        <TodoBarTasks/>
+        <TodoBarForm />
+        <TodoBarTasks />
+        <TodoBarLoader />
       </div>
     </TodoBarPanel>
   </div>
@@ -19,11 +20,12 @@ import TodoBarProjects from './components/projects.vue'
 import TodoBarTasks from './components/tasks.vue'
 import TodoBarForm from './components/form.vue'
 import TodoBarPanel from './components/panel.vue'
+import TodoBarLoader from './components/loader.vue'
 
 export default {
   name: 'laravel-todobar',
   components: {
-    TodoBarHandle, TodoBarProjects, TodoBarTasks, TodoBarForm, TodoBarPanel
+    TodoBarHandle, TodoBarProjects, TodoBarTasks, TodoBarForm, TodoBarPanel, TodoBarLoader
   }
 }
 </script>
