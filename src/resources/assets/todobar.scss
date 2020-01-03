@@ -30,61 +30,7 @@
       flex: 0;
     }
 
-    ul.laravel-todobar-list {
-      list-style-type: none;
-      padding: 0;
-      line-height: 1.5;
-      overflow-y: scroll;
-      flex: 1;
-      margin-bottom: 0;
 
-      li {
-        padding: 15px;
-        border-bottom: 1px solid #dde;
-
-        .form-group,
-        .form-group label {
-          margin-bottom: 0;
-        }
-
-        input:checked+label .checkbox-dummy {
-          background: green;
-        }
-
-        label {
-          display: block;
-          padding-left: 30px;
-          margin-top: -20px;
-        }
-
-        .form-group input[type="checkbox"] {
-          display: none;
-        }
-
-        .form-group .checkbox-dummy {
-          background: white;
-          color: white;
-          border: 1px solid #aaa;
-          width: 20px;
-          height: 20px;
-          transform: translateY(100%) translateX(-30px);
-          border-radius: 5px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        input:checked+label .label-content {
-          color: slategray;
-          text-decoration: line-through;
-          text-decoration-color: slategray;
-        }
-
-        &.custom-checkbox-odd {
-          background: #f9f9f9;
-        }
-      }
-    }
 
     .laravel-todobar-loader {
       background: rgba(255, 255, 255, 0.7) no-repeat 50% 50%;

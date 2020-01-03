@@ -1,8 +1,9 @@
 import Vue from 'vue'
-import App from './App.vue'
+import LaravelTodobar from './resources/App.vue'
 
 Vue.config.productionTip = false
+Vue.config.devtools = false
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  render: h => h(LaravelTodobar),
+}).$mount('#laravel-todobar')

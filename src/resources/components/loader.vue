@@ -41,10 +41,11 @@ export default {
       }
   },
   mounted() {
+    var that = this;
     EventBus.$on("todobar:show-loader", () => {
-        loaderVisible = true;
+        that.loaderVisible = true;
     }).$on("todobar:hide-loader", () => {
-        loaderVisible = false;
+        that.loaderVisible = false;
     })
   },
   beforeDestroy() {

@@ -26,7 +26,7 @@ export const EventBus = new Vue({
                     headers: {
                         "Accept": "application/json",
                         "Content-Type": "application/json",
-                        "Authorization": "Bearer " + EventBus.$data.token
+                        "Authorization": "Bearer " + window.todoBarToken
                     },
                     body: (data !== undefined) ? JSON.stringify(data) : null
                 }).then(response => {
