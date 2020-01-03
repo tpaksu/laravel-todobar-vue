@@ -16,11 +16,9 @@ class TodoBarServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
-        $this->loadViewsFrom(__DIR__ . '/resources/views', 'laravel-todobar');
         $this->mergeConfigFrom(__DIR__ . '/config/todobar.php', "todobar");
         $this->publishes([
-            __DIR__ . '/config/todobar.php' => config_path('todobar.php'),
-            __DIR__ . '/resources/views' => base_path('resources/views/tpaksu/todobar'),
+            __DIR__ . '/config/todobar.php' => config_path('todobar.php')
         ]);
     }
 

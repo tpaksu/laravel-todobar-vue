@@ -14,7 +14,7 @@ TodoBar creates an overlay right sidebar to ease your Laravel projects task mana
 
 ![Classic Mode](preview-classic.png)
 <br><br>
-*Dark Mode*
+*Dark Mode (Will be available in next versions)*
 
 ![Dark Mode](preview-dark-mode.png)
 <br><br>
@@ -46,16 +46,37 @@ This package publishes the views used in the package and a configuration file wh
 
 - **overlay**: Defines if the sidebar will cover some part of the web page (overlay), or shrink the page and display the whole page besides itself.
 
-The views used and published by this package:
+- **dark_mode**: Defines if the interface will use the dark theme. (Not yet implemented)
 
-    + resources/views/vendor/tpaksu/todobar
-    +-- partials
-    |   +-- form.blade.php
-    |   |-- handle.blade.php
-    |   |-- projects.blade.php
-    |   +-- tasks blade.php
-    +-- todobar.blade.php
-<br><br>
+- **storage**: Defines the used storage class to store the tasks. Currently supports one `JSONStorage` driver. Can be extended. See [**Extending**](#extending) below.
+
+### .Vue Files
+
+The files are located in:
+
+    +- tpaksu/laravel-todobar/src
+      +- resources
+        +- assets
+        |   +- todobar.scss         Global SCSS file
+        |- components
+        |   +- form.vue             Contains the `add new task` form component
+        |   |- handle.vue           Contains the todobar drawer handle component
+        |   |- loader.vue           Contains the loader overlay
+        |   |- modal.vue            Contains the `edit task` modal component
+        |   |- panel.vue            Contains the todobar container
+        |   |- projects.vue         Contains the project select and buttons
+        |   +- tasks.vue            Contains the task list
+        |-- App.vue                 The main entry file
+        +-- eventbus.js             EventBus module for communicating between components
+
+After compilation with `npm run build` these files will be created:
+
+    +- tpaksu/laravel-todobar/dist
+      +- app.css                    Compiled CSS file
+      |- app.js                     Compiled user code files
+      |- chunk-vendors.js           Compiled vendor files
+      +- index.html                 Test page
+
 
 ## Extending
 
